@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>binaire</title>
+
+	<style>
+		input[type='text'] {
+text-transform:uppercase;
+} 
+.placement{
+	margin-left: 38vw;
+	margin-top: 35vh;
+}
+.titre{
+	text-align: center;
+	font-size: 2em;
+
+}
+
+	</style>
+</head>
+<body>
+<h1 class="titre">Convertisseur nombres binaires, decimaux, hexadecimaux</h1>
+<form class="placement">
+ 
+<p><label>Décimal&#160;: </label> <input type="text" id="decimal" name="decimal" >
+<input type="button" name="submit1" value="&#8674;" onClick="xdecimal();"></p>
+ 
+<p><label>Hexadécimal&#160;: </label> <input type="text" id="hexadecimal" name="hexadecimal">
+<input type="button" name="submit2" value="&#8674;" onClick="xhexadecimal();"></p>
+ 
+<p><label>Binaire&#160;: </label> <input type="text" id="binaire" name="binaire">
+<input type="button" name="submit3" value="&#8674;" onClick="xbinaire();"></p>
+ 
+</form>
+
+<form>
+	<p type="text" id="tdecimal" name="decimal">Décimal : </p>
+
+	<p type="text" id="thexadecimal" name="hexadecimal">Héxadecimal : </p>
+
+	<p type="text" id="tbinaire" name="tbinaire">binaire : </p>
+</form>
+
+<script>
+
+	function xdecimal()
+{
+decimal = document.getElementById("decimal");
+hexadecimal = document.getElementById("hexadecimal");
+binaire = document.getElementById("binaire");
+
+document.getElementById("tdecimal").innerHTML = "Décimal : " + decimal.value;
+document.getElementById("thexadecimal").innerHTML = "Héxadecimal : " + (decimal.value-0).toString(16);
+document.getElementById("tbinaire").innerHTML = "binaire : " + (decimal.value-0).toString(2);
+
+hexadecimal.value = (decimal.value-0).toString(16);
+binaire.value = (decimal.value-0).toString(2);
+
+}
+ 
+function xhexadecimal()
+{
+decimal = document.getElementById("decimal");
+hexadecimal = document.getElementById("hexadecimal");
+binaire = document.getElementById("binaire");
+
+document.getElementById("tdecimal").innerHTML = "Décimal : " + parseInt(hexadecimal.value,16);;
+document.getElementById("thexadecimal").innerHTML = "Héxadecimal : " + hexadecimal.value;
+document.getElementById("tbinaire").innerHTML = "binaire : " + (parseInt(hexadecimal.value,16)).toString(2);
+ 
+decimal.value = parseInt(hexadecimal.value);
+binaire.value = parseInt(hexadecimal.value);
+}
+ 
+function xbinaire()
+{
+decimal = document.getElementById("decimal");
+hexadecimal = document.getElementById("hexadecimal");
+binaire = document.getElementById("binaire");
+
+document.getElementById("tdecimal").innerHTML = "Décimal : " + parseInt(binaire.value,2);
+document.getElementById("thexadecimal").innerHTML = "Héxadecimal : " + (parseInt(binaire.value,2)).toString(16);
+document.getElementById("tbinaire").innerHTML = "binaire : " + binaire.value;
+
+decimal.value = parseInt(binaire.value,2);
+hexadecimal.value = (parseInt(binaire.value,2)).toString(16);
+}
+</script>
+</body>
+</html>

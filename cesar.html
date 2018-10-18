@@ -1,0 +1,109 @@
+<html><head>
+<title>Chiffre de César</title>
+<link rel="stylesheet" href="../style.css">
+
+</head>
+<body background="../fondcrypto.gif">
+<p>
+</p><form>
+<center>
+<table>
+<tbody><tr>
+<td rowspan="4"></td>
+<td bgcolor="#08FF7C">Message clair<br>
+<br>
+<center></center></td>
+<td bgcolor="#08FF7C"><textarea name="clair" rows="6" cols="70" wrap="virtual" style="margin: 0px; height: 283px; width: 664px;">CHIFFRE DE CESAR</textarea></td>
+</tr>
+<tr bgcolor="#FFCCFF">
+<td>Décalage </td>
+        <td> 
+          <table width="80%" border="0" cellspacing="1" cellpadding="1">
+            <tbody><tr>
+              <td>
+                <input type="TEXT" name="decalage" size="3" value="3">
+              </td>
+              <td>
+                <input type="BUTTON" value="+" onclick="Plus(decalage)" name="BUTTON">
+              </td>
+              <td>
+                <input type="BUTTON" value="-" onclick="Moins(decalage)" name="BUTTON2">
+              </td>
+              <td width="30"></td>
+             <td><img align="Middle" src="../icones/down.gif" width="25" height="25"></td>
+              <td>
+                <input type="BUTTON" value="Chiffrer" onclick="Cesar(clair,decalage.value,chiffre)" name="BUTTON3">
+              </td>
+              <td><img align="Middle" src="../icones/up.gif" width="25" height="25"></td>
+              <td>
+                <input type="BUTTON" value="Déchiffrer" onclick="Cesar(chiffre,26-decalage.value,clair)" name="BUTTON4">
+              </td>
+              <td>
+                <input type="BUTTON" value="Effacer" onclick="clair.value=''; chiffre.value=''" name="BUTTON5">
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+</tr>
+<tr>
+<td bgcolor="#FFFF99">Message chiffré<br>
+<br>
+<center></center></td>
+<td bgcolor="#FFFF99"><textarea name="chiffre" rows="6" cols="70" wrap="virtual" style="margin: 0px; height: 256px; width: 662px;"></textarea></td>
+</tr>
+</tbody></table>
+</center>
+</form>
+<script language="JavaScript">
+
+function Plus(decalage) {
+  k=parseInt(decalage.value);
+  k++;
+   if(k>25) {k-=26};
+  decalage.value = k;
+}
+
+function Moins(decalage) {
+  k=parseInt(decalage.value);
+  k--;
+   if(k<0) {k+=26};
+  decalage.value = k;
+}
+
+
+function Cesar(clair,decalage,chiffre) {
+  Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  clair.value = clair.value.toUpperCase();
+  k=parseInt(decalage);
+  while(k<0) {k+=26};
+   while(k>25) {k-=26};
+  n=0;
+  chiffre.value = "";
+  for(var count = 0; count < clair.value.length; count++) {
+    alpha = clair.value.charAt(count);
+    idx = Alphabet.indexOf(alpha);
+    if (idx > -1)     // ne (dé)chiffre que les 26 lettres majuscules
+    {
+    if ((n%5==0) && (n>0))
+    {chiffre.value+=" "};
+    n++;
+    chiffre.value += Alphabet.charAt(idx+k);
+    }
+  }
+}
+
+function cadenas(reponse)
+{
+  if (reponse.charAt(6)==4) {document.location = "../corriges/"+reponse+".html"}
+  else
+  document.location = "../corriges/"+reponse+".nb"  
+}
+
+function choisir(adresse)
+{ 
+  document.location=adresse
+}
+
+</script>
+</body>
+</html>
