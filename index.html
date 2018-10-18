@@ -1,16 +1,37 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
-    <link href="assets/player.png" rel="shortcut icon" >
-
-  <title>Dodger</title>
-    
-<style>
-
-    body{
-        overflow: hidden;
-            background: linear-gradient(
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="styleshetet" href="https://www.neuralia.co/css/landing/bootstrap.min.css">
+    <link href="https://www.neuralia.co/css/landing/style.css" rel="stylesheet">
+    <link href="https://www.neuralia.co/css/landing/styleswitcher.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://www.neuralia.co/css/landing/themes/red.css" data-color="" id="theme">
+    <link href="https://www.neuralia.co/css/landing/responsive.css" rel="stylesheet">
+    <link href="https://www.neuralia.co/css/landing/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.neuralia.co/css/landing/magnific-popup.css" />
+    <link rel="stylesheet" href="https://www.neuralia.co/css/landing/flexslider.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <title>template</title>
+  <style>
+  body{
+    overflow-x: hidden;
+    scroll-behavior : smooth;
+  }
+    *{
+      margin: 0;
+    }
+    hr{
+      margin: 0;
+    }
+    .accueil{
+    background: linear-gradient(
         rgba(0, 0, 0, 0.5), 
         rgba(0, 0, 0, 0.5)
       ),url('./telechargements/mountainun2.jpg');
@@ -19,13 +40,596 @@
     background-repeat: no-repeat;
     background-size: cover;
     }
+    .software{
+          background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ),url('./telechargements/program.jpg');
+    background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+
+
+    }
+
+    .biographie{
+    background: white;
+    background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: groove;
+    }
+    #avatar{
+      width: 300px;
+      border-radius: 10px;
+      float: left;
+      margin-right: 20px;
+    }
+    #nom{
+      font-size: 4em;
+      padding-top: 0vw;
+      border: groove;
+    }
+    #card-presentation{
+      font-size: 2em;
+      color: white;
+      width: 40%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer{
+      padding: 2rem 1.5rem 3rem;
+    }
+    .container{
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+    .present{
+      padding-left: 0vw;
+      padding-right: 0vw;
+    }
+    .intertitre{
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    #div-bio{
+      padding-top: 
+      border: groove;
+    }
+    .web:hover{
+      color: white;
+    }
+    .logo-souris{
+      width: 3%;
+      height: 3%;
+    }
+    .position-souris{
+      text-align: center;
+    }
+    .icon-competences{
+              margin-left: calc(50% - 13px);
+        padding-bottom: 40px;
+    }
+
+
     
-</style>
-    
-  <script type="text/javascript" src="phaser.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>    
+    @media (max-width: 1000px){
+      #avatar{
+        width: 100px;
+        border-radius: 10px;
+        float: left;
+        margin-right: 10px;
+      }
+      #nom{
+        font-size: 1.5em;
+      margin-bottom: 0; 
+      }
+      #card-presentation{
+        color: white;
+        width: 100%;
+      }
+    }
+    .img-projet{
+      width: 100%;
+      background-size: cover;
+    }
+    .titre-projet{
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .titre{
+        padding-bottom: 130px;
+      }
+      #nom, #text_description{
+        color: white;
+      }
+      .content{
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 28px;
+        position: sticky;
+      }
+      .titre-competences{
+        font-weight: bold;
+        text-align: center;
+        font-size: 2em;
+      }
+      .colonne-competences{
+        height: 300px;
+      }
+      .icon-competences{
+        margin-left: calc(40% - 11px);
+        padding-bottom: 40px;
+        width: 30%;
+        height: 30%;
+        position: static;
+      }
+      .hero-image{
+        width:100%;
+        height: 350px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .acceuilPortfolio{
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.5), 
+            rgba(0, 0, 0, 0.5)
+          ),url('./images/bg-home-min.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .is-rounded{
+        border-radius: 10px !important;
+      }
+      @media (max-width: 400px){
+        .hero-image {
+          height: 200px !important;
+        }
+        .icon-competences{
+        margin-left: calc(40% - 11px);
+        padding-bottom: 0px;
+        width: 30%;
+        height: 30%;
+      }
+
+      }
+
+      @media (max-width: 740px){
+        .hero-image {
+          height: 400px ;
+        }
+
+      }
+      @media (max-width : 1024px){
+        .presentation{
+          display: none;
+        }
+        .acceuilPortfolio{
+          background: linear-gradient(
+              rgba(128, 79, 144, 0.5), 
+              rgba(128, 79, 144, 0.5)
+            ),url();
+        }
+        .hero-image {
+          width:100%;
+          height: 350px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+        .section-titre{
+          padding-bottom: 30px;
+        }
+        .titre-projet{
+          font-size: 2em;
+        }
+      }
+      @media (max-width : 1524px){
+        .presentation{
+          position: absolute;
+          top: 84vh;
+          left: 60vw;
+          width: 400px;
+        }
+        #text{
+            font-size: 20px !important;
+            width: 90%;
+        }
+      }
+
+      .slick-slide {
+        margin: 0px 20px;
+      }
+
+      .slick-slide img {
+        width: 100%;
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        color: black;
+      }
+
+      .slick-slide {
+        transition: all ease-in-out .3s;
+        opacity: .2;
+      }
+      
+      .slick-active {
+        opacity: .5;
+      }
+
+      .slick-current {
+        opacity: 1;
+      }
+      .titre-card{
+        font-weight: bold;
+      }
+      .white{
+        color: white !important;
+      }
+      #overlay {
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,0.85);
+          z-index: 20;
+          cursor: pointer;
+      }
+      .is-4{
+        cursor: pointer;
+      }
+      #text{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 50px;
+          color: white;
+          width: 60%;
+          transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+      }
+
+  </style>
 </head>
 <body>
-  
+<section class="hero is-fullheight accueil">
+  <div class="hero-body">
+    <div id="card-presentation" data-aos="zoom-in" data-aos-delay="300">
+      <h1> Marius Coudray</h1>
+    </div>
+  </div>
+</section>
+
+ <section class="hero is-medium">
+        <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
+          Mes centres d'interets <br><br>
+          <span class="header_line"></span>
+        </h1>
+        
+      <div class="hero-body">
+        <div class="container present">
+          <div class="columns">
+            <div class="column is-4 colonne-competences sport">
+              <span class="icon icon-competences" data-aos="zoom-in-down">
+                <i class="far fa-futbol fa-4x"></i>
+              </span>
+              <h1 class="titre-competences">
+                Le sport
+              </h1>
+              <br><br>
+              <div class="content">
+                Après avoir essayé plusieurs sports (natation, football et judo) j'ai pu trouver les sports qui me convienent. Je pratique depuis 5 ans maintenant de l'escalade au club alpin francais. Je pratique aussi le VTT depuis 4 ans ainsi que du krav maga depuis le debut de l'année.
+              </div>
+            </div>
+            <br><br><br><br><br>
+            <div class="column is-4 colonne-competences">
+              <span class="icon icon-competences" data-aos="zoom-in-down" data-aos-delay="50">
+                <i class="fas fa-music fa-4x"></i>
+              </span>
+              <h1 class="titre-competences">
+                La musique
+              </h1>
+              <br><br>
+              <div class="content">
+        Cela fait maintenant 7 ans que je pratique de la guitare au conservatoire. Cela m'a permis de m'ouvrir à d'autres styles de musique. J'ai aussi fait 8 ans de solfège, cela ma permis d'obtenir mon BEM (Brevet d'Etudes Musicales).
+              </div>
+            </div>
+            <br><br><br>
+            <div class="column is-4 colonne-competences">
+              <span class="icon icon-competences" data-aos="zoom-in-down" data-aos-delay="150">
+                <i class="fa fa-keyboard-o fa-4x"></i>
+              </span>
+              <h1 class="titre-competences">
+                L'informatique
+              </h1>
+              <br><br>
+              <div class="content">
+                L'informatique est un domaine vaste qui m'a assez vite séduit, le fonctionnement des ordinateurs, des programmes ect...
+                Je me suis finnalement mis à la programmation à l'automne 2015
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-medium">
+
+  <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
+      Mes centres d'interets <br><br>
+      <span class="header_line"></span>
+    </h1>
+      <div class="hero-body">
+        <div class="container present">
+          <div class="columns">
+            <div class="column is-3 colonne-competences">
+              <span class="icon has-text-dark icon-competences" data-aos="zoom-in-down">
+                <i class="fas fa-laptop-code fa-4x"></i>
+              </span>
+              <h1 class="titre-competences">
+                C++/SFML
+              </h1>
+              <br><br>
+              <div class="content">
+                J'ai commencé à développer en C++ en 2015, grâce à ce language, j'ai pu faire le jeu <strong>jumpgame</strong> et <strong>circle</strong>, ces deux jeux m'ont fait apprendre la sfml, une bibliothèque graphique 2D. J'ai ausi developpé des logiciels de calculs et de gestion de l'ordinateur.
+              </div>
+            </div>
+            <br><br><br><br><br>
+            <div class="column is-3 colonne-competences">
+              <span class="icon has-text-dark icon-competences" data-aos="zoom-in-down" data-aos-delay="50">
+                <i class="fab fa-python fa-4x"></i>
+              </span>
+              <h1 class="titre-competences">
+                Python
+              </h1>
+              <br><br>
+              <div class="content">
+                Depuis le début des vacances j'apprends à programmer python, et, des programmes devraient bientôt arriver dans la rubrique mes <strong>projets</strong>.<br>Je compte apprendre le famework <strong>django</strong> pour faire un mélange HTML/CSS/python.
+              </div>
+            </div>
+            <br><br><br><br><br>
+            <div class="column is-3 colonne-competences">
+              <span class="icon has-text-dark icon-competences" data-aos="zoom-in-down" data-aos-delay="150">
+                <i class="fas fa-database fa-4x"></i>
+              </span>
+              <h1 class="titre-competences">
+                  Back-end
+              </h1>
+              <br><br>
+              <div class="content">
+                Grâce au C++, j'ai appris à manier le Back-end, avec les bases de données MySql et la gestion client serveur
+              </div>
+            </div>
+            <div class="column is-3 colonne-competences">
+              <span class="icon has-text-dark icon-competences" data-aos="zoom-in-down" data-aos-delay="200">
+                <i class="fab fa-html5 fa-4x"></i>
+              </span>
+              <h1 class="titre-competences">
+                  WEB
+              </h1>
+              <br><br>
+              <div class="content">
+                J'ai appris à utiliser l'HTMl et le CSS ansi que les librairies qui vont avec (bulma, aos, font awesome) pour créer ce protfolio inspiré de celui de <a href="https://matthieuporte.github.io" target="_blank">Matthieu Porte</a>. Ces languages me resserviront pour de futurs projets python.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="hero is-fullheight software">
+  <div class="hero-body">
+    <div id="card-presentation" data-aos="zoom-in">
+      <h1> Software</h1>
+    </div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="hero-body">
+      <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
+        C++
+        <br><br>
+        <span class="header_line"></span>
+      </h1>
+    <div class="container">
+        <div class="projet">
+          <div class="columns" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom">
+            <div class="column is-two-thirds">
+              <img src="https://www.cssdebutant.com/include/images/css-twitter.jpg" class="img-projet visual">
+          </div>
+          <div class="column">
+            <h1 class="titre-projet">vc-redist</h1>
+            <p>Si vous voulez lancer mes programmes, pour des question de compatibilité, je vous propose ce package pour vous éviter d'éventuelles erreures (les programmes proposés sont compilés pour windows) </p><br>
+            <a class="button is-link" href="telechargements/vcredist.zip">Télécharger&nbsp;&nbsp;&nbsp;<i class="fas fa-download"></i></i>
+            </a></a>
+          </div>
+        </div>  
+      </div>
+      <br><br>
+      <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
+        <div class="columns">
+          <div class="column is-two-thirds"  id="shar">
+            <img src="jumpgame.png" class="img-projet">
+          </div>
+          <div class="column">
+            <h1 class="titre-projet">Jumpgame</h1>
+            <p>Jumpgame est le premier jeu que j'ai developpé en c++ avec la SFML. Ce jeu n'est pas fini, il me reste plus qu'à terminer les maps, je vous le propose en version bêta</p><br>
+            <a class="button is-link" href="telechargements/jumpgame.zip">Télécharger&nbsp;&nbsp;&nbsp;<i class="fas fa-download"></i></a>
+          </div>
+        </div>  
+      </div>
+      <br><br>
+      <div class="projet">
+        <div class="columns" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom">
+          <div class="column is-two-thirds">
+            <img src="Circle.png" class="img-projet">
+          </div>
+          <div class="column">
+            <h1 class="titre-projet">Circle</h1>
+            <p>Circle, un jeu pour s'occuper, jusqu'à quel niveau irez-vous?  </p><br>
+            <a class="button is-link" href="telechargements/circle.zip">Télécharger&nbsp;&nbsp;&nbsp;<i class="fas fa-download"></i></i></a></a>
+          </div>
+        </div>  
+      </div>
+      <br><br><br><br>
+        <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
+          Python
+          <br><br>
+          <span class="header_line"></span>
+        </h1>
+      <div class="projet">
+        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
+          <div class="column is-two-thirds">
+            <img src="http://placehold.it/700x300" class="img-projet">
+          </div>
+          <div class="column">
+            <h1 class="titre-projet">Titre</h1>
+            <p>contenucontenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu  </p><br>
+            <a class="button is-link">Télécharger&nbsp;&nbsp;&nbsp;<i class="fas fa-download"></i></a>
+          </div>
+        </div>  
+      </div>
+      <br><br>
+      <div class="projet">
+        <div class="columns" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom">
+          <div class="column is-two-thirds">
+            <img src="http://placehold.it/700x300" class="img-projet">
+          </div>
+          <div class="column">
+            <h1 class="titre-projet">Titre</h1>
+            <p>contenucontenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu  </p><br>
+            <a class="button is-link">Visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a></a>
+          </div>
+        </div>  
+      </div>
+      <br><br>
+      <div class="projet">
+        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
+          <div class="column is-two-thirds">
+            <img src="http://placehold.it/700x300" class="img-projet">
+          </div>
+          <div class="column">
+            <h1 class="titre-projet">Titre</h1>
+            <p>contenucontenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu  </p><br>
+            <a class="button is-link">Visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a></a>
+          </div>
+        </div>  
+      </div>
+      <br>
+      <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
+          <br><br>
+          WEB
+          <br><br>
+          <span class="header_line"></span>
+        </h1>
+      <div class="projet">
+        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
+          <div class="column is-two-thirds">
+            <img src="telechargements/binary.png" class="img-projet">
+          </div>
+          <div class="column">
+            <h1 class="titre-projet">Binary</h1>
+            <p>convert-Bin est mon premier projet dans lequel j'inclue le javascript. il consiste à convertir un nombre de : <br><br>
+            - decimal -> hexadecimal -> binaire<br>
+            - hexadecimal -> decimal -> binaire<br>
+            - binaire -> hexadecimal -> binaire  </p><br>
+            <a class="button is-link" href="http://icelad-dev.pe.hu/autres/binaire.html">visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>  
+      </div>
+       <div class="projet">
+        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
+          <div class="column is-two-thirds">
+            <img src="http://placehold.it/700x300" class="img-projet">
+          </div>
+          <div class="column">
+            <h1 class="titre-projet">César</h1>
+            <p>voici un projet que j'ai fait pour m'entrainer, un site qui code en César</p><br>
+            <a class="button is-link" href="http://icelad-dev.pe.hu/autres/cesar.html">visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>  
+      </div>
+      <div class="projet">
+        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
+          <div class="column is-two-thirds">
+            <img src="http://placehold.it/700x300" class="img-projet">
+          </div>
+          <div class="column">
+            <h1 class="titre-projet">dodger</h1>
+            <p>je vous présente mon premier jeu créé en javascript, attention, il peut etre addictif</p><br>
+            <a class="button is-link" href="http://icelad-dev.pe.hu/phaser/phaser.html">visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
+  <hr>
+    <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Powered</strong> by Marius Coudray<br>©copyright - 2018
+      </p>
+    </div>
+  </footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript">
+
+AOS.init();
+
+$( document ).ready(function() {
+
+  $(window).scroll(function () { 
+    if ($(this).scrollTop() < $(window).height()/1.2){
+         $('#card-presentation').css({
+            'margin-top' : +($(this).scrollTop()/3)*2+"px"
+         });
+    }
+
+    });
+
+
+
+});    
+
+
+
+</script>
 </body>
 </html>
+
+
+
+
+
+<!--<section class="hero is-fullheight biographie">
+    <div id=intertitre><p>Software</p></div>
+    <div>
+      <img src="https://matthieuporte.github.io/images/marius.jpg" id="avatar">
+      <h1 id="nom">Marius Coudray</h1>
+      <p id="bio">blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+    </div>
+</section>-->
