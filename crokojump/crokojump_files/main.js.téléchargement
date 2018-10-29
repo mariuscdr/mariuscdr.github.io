@@ -1,0 +1,33 @@
+var game = new Phaser.Game(screen.width -15, screen.height);
+
+var crokojump = {
+    
+    preload : function(){
+        game.load.image('fond', 'fond.jpg');
+        game.load.spritesheet('mummy', 'sprite.jpg', 176, 211, 10);
+        
+    
+    },
+    create : function (){
+        this.fond = game.add.sprite(0, 0, 'fond');
+        this.fond.width = screen.width -15;
+        this.fond.height = screen.height;
+        var mummy = game.add.sprite(300, 200, 'mummy');
+
+    var walk = mummy.animations.add('walk');
+
+    mummy.animations.play('walk', 30, true);
+        
+        
+        
+    },
+
+    update : function(){
+            
+       
+        
+    }
+};
+
+game.state.add('crokojump', crokojump);
+game.state.start('crokojump');
