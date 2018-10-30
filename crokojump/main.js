@@ -4,8 +4,8 @@ var crokojump = {
     
     preload : function(){
         game.load.image('fond', 'fond.jpg');
-        game.load.image('player2', 'player.png');
-        game.load.image('cactus', 'mechant.png');
+        game.load.image('player2', 'play.jpg');
+        game.load.image('cactus', 'logo-atomique.png');
         game.load.image('oiseau', 'player.png');
         
     
