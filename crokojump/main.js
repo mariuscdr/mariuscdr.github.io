@@ -20,14 +20,14 @@ var crokojump = {
         
         this.player = game.add.sprite(screen.width * 0.1, screen.height * 0.4, 'player2');
         this.player.anchor.set(0.5);
-        this.player.width = 90;
-        this.player.height = 100;
+        this.player.width = 50;
+        this.player.height = 50;
         this.player.checkWorldBounds = true;
         
         game.physics.arcade.enable(this.player);
         this.player.body.gravity.y = 4000 ;
-        this.player.body.checkCollision.down = true;
-        this.player.body.immovable = true;
+
+        //this.player.body.immovable = true;
         this.player.body.collideWorldBounds = true;
          
         var line = new Phaser.Line(0, screen.height * 0.5, screen.width, screen.height * 0.5);
@@ -52,9 +52,9 @@ var crokojump = {
         this.oldScore = 0;
         this.oldNiveau = 0;
         
-       // this.timer2 = game.time.events.loop(2000, this.scoreadd, this);
-       /* this.labelScore = game.add.text(20, 20, "0" + " points", {font : "38px Arial", fill : "0x000000"});
-        this.labelNiveau = game.add.text(20, 80, "niveau " + "0", {font : "38px Arial", fill : "0x000000"});*/
+        this.timer2 = game.time.events.loop(2000, this.scoreadd, this);
+        this.labelScore = game.add.text(20, 20, "0" + " points", {font : "38px Arial", fill : "0x000000"});
+        this.labelNiveau = game.add.text(20, 80, "niveau " + "0", {font : "38px Arial", fill : "0x000000"});
     
         
 this.pres = false;
@@ -63,57 +63,81 @@ this.pres = false;
 
     update : function(){
  //       this.player.y = screen.height * 0.37;
-        this.player.body.velocity.x = 0;
-        
-                if(this.T == 1)
-            {
-            game.physics.arcade.collide(this.player, this.cactuss)
-            }
-        else if (this.T == 0)
-            {
-                game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
-            }
+        //this.player.body.velocity.x = 0;
+//               if (this.input.keyboard.isDown(Phaser.Keyboard.T)==true && this.T == 0)
+//            {
+//                this.T = 1;
+//            }
+//        else if (this.input.keyboard.isDown(Phaser.Keyboard.F)==true && this.T == 1)
+//            {
+//                this.T = 0;
+//            }
+//        
+//                if(this.T == 1)
+//            {
+//            game.physics.arcade.collide(this.player, this.cactuss)
+//            }
+//        else if (this.T == 0)
+//            {
+               game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
+//            }
         
         if (this.cursors.right.isDown)
             {
-             this.player.body.velocity.x = 300;
-             if (this.spaceKey.downDuration(200))
-                {
-                    this.player.body.velocity.y = -800;  
-                }
-                
-            }
-        else if (this.spaceKey.downDuration(200))
-            {
-                this.player.body.velocity.y = -800;
-                this.press = true;
-                
-                if (this.cursors.right.isDown)
+             this.player.body.velocity.x += 10;
+                game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
+                if(this.player.y >= screen.height * 0.35)
                     {
-                        this.player.body.velocity.x = 300;
-                
+                        if (this.spaceKey.downDuration(200))
+                        {
+                            game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
+                            this.player.body.velocity.y = -800;  
+                        } 
                     }
+
+                
             }
         else if (this.cursors.left.isDown)
             {
-             this.player.body.velocity.x = -300;
-             if (this.spaceKey.downDuration(300))
+                game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
+             this.player.body.velocity.x -= 10;
+                
+             if(this.player.y >= screen.height * 0.35)
                 {
-                    this.player.body.velocity.y = -150;  
+                    if (this.spaceKey.downDuration(300))
+                    {
+                        game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
+                        this.player.body.velocity.y = -150;  
+                    }                    
+                        
                 }
+
                 
             }
-
-       if (this.input.keyboard.isDown(Phaser.Keyboard.T)==true && this.T == 0)
+        
+        if (this.player.y >= screen.height * 0.35)
             {
-                this.T = 1;
+                game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
+                if (this.spaceKey.downDuration(200))
+                    {
+                        game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
+                        this.player.body.velocity.y = -800;
+                        this.press = true;
+                
+                        if (this.cursors.right.isDown)
+                            {
+                                game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
+                                this.player.body.velocity.x += 10;
+                
+                            }
+                    }
             }
-        else if (this.input.keyboard.isDown(Phaser.Keyboard.F)==true && this.T == 1)
-            {
-                this.T = 0;
-            }
+        
 
-        if(this.player.y <= screen.height * 0.3)
+
+
+
+        /*if(this.player.y <= screen.height * 0.3)
             {
                 game.physics.arcade.overlap(this.player, this.cactuss, this.restartGame, null, this);
                 this.player.loadTexture('oiseau', 0);
@@ -126,7 +150,7 @@ this.pres = false;
                 this.player.loadTexture('player2', 0);
                 this.player.width = 50;
                 this.player.height = 50;
-            }
+            }*/
         
 
 
@@ -135,11 +159,13 @@ this.pres = false;
         
         
         this.dalay = Math.floor(Math.random() * (3000 - 2000 + 1)) + 2000;
-
+        
         
     },
     
     ajouterCactus : function(){
+        setTimeout(this.ajouterCactus, this.dalay);
+        
         var positionX = Math.floor(Math.random() * (screen.width - screen.width * 0.7)) + screen.width * 0.7;
         var positionY = screen.height * 0.47;
         var cactus1 = game.add.sprite(positionX, positionY, 'cactus');
@@ -147,7 +173,7 @@ this.pres = false;
         cactus1.width = 50;
         cactus1.height = 50;
         game.physics.arcade.enable(cactus1);
-        cactus1.body.velocity.x = -200;
+        cactus1.body.velocity.x = -250;
         this.cactuss.add(cactus1);
         
         cactus1.checkWorldBounds = true;
@@ -158,7 +184,7 @@ this.pres = false;
     game.state.start('crokojump');
     //alert('touché')
     },
-   /* scoreadd : function() {
+    scoreadd : function() {
         this.score += 40;
         this.labelScore.text = this.score + " points";
         
@@ -178,7 +204,7 @@ this.pres = false;
                 this.vitessegravite += 25;
                 vitesse +=10;
             }
-    }*/
+    }
     
 };
 
