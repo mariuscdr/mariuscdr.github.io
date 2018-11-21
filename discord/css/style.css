@@ -244,7 +244,7 @@
 }
 
     
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
       #avatar{
         width: 100px;
         border-radius: 10px;
@@ -309,6 +309,7 @@
       .is-rounded{
         border-radius: 10px !important;
       }
+          }
       @media (max-width: 400px){
         .hero-image {
           height: 200px !important;
@@ -336,7 +337,7 @@
               top: 35%;
           }
       }
-            @media (max-width: 500px){
+            @media (max-width: 600px){
         .hero-image {
           height: 400px ;
         }
@@ -360,7 +361,31 @@
 
 
       }
-     @media (max-width: 1090px){
+            @media (min-width: 600px){
+        .hero-image {
+          height: 400px ;
+        }
+          .contenu{
+              font-size: 2em;
+              left: 28%;
+              top: 35%;
+          }
+          .card_projet:hover h2{
+              /*  transform: scale(1); */
+              /*transform: translate(0%, -60%);*/
+              /*transform: scale(1.5);*/
+              left: 26%;
+              font-size: 2.4em;
+              opacity: 1;
+    
+          }
+          .card_projet:hover p{
+            left: 28.5%;
+          }
+
+
+      }
+     @media (max-width: 992px){
 
           .contenu{
               font-size: 2em;
