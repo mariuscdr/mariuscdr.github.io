@@ -164,22 +164,23 @@
     <h1 class="title has-text-centered section-titre">Mes Projets</h1>
     <br>
     <div id="larg">
-        <div class="columns is-two-third is-desktop projet">
-            <div class="column is-one-third card_projet">
+        <div class="columns is-desktop projet">
+            <div class="column is-12-mobile is-half-tablet is-one-third-desktop card_projet">
                 <div class="fond">
                     
                     <div class="overImg">
                         
                         <img src="./css/telechargements/program.jpg" class="img_projet"/>
-                        
+                        <div class="contenu_text">
                             <h2 class="contenu">Vc-Redist</h2>
                             <p class="soulignement">Telécharger</p>
+                        </div>
                         
                     </div>
                 </div>
             </div>
             
-                        <div class="column is-one-third card_projet">
+                        <div class="column is-12-mobile is-half-tablet is-one-third-desktop card_projet">
                 <div class="fond">
                     <div class="overImg">
                         <img src="./css/telechargements/program.jpg" class="img_projet"/>
@@ -187,7 +188,7 @@
                 </div>
             </div>
             
-                        <div class="column is-one-third card_projet">
+                        <div class="column is-12-mobile is-half-tablet is-one-third-desktop card_projet">
                 <div class="fond">
                     <div class="overImg">
                         <img src="./css/telechargements/program.jpg" class="img_projet"/>
@@ -231,6 +232,13 @@ $( document ).ready(function() {
     }
 
     });
+    
+    $('.column').hover(function(){
+        $('this').width(200 + "%");
+            
+
+    });
+    
 
 
 
