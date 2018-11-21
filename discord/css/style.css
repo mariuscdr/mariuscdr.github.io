@@ -137,13 +137,6 @@
   width:100%;
     border-radius: 8%
 }
-.titre_projet{
-  transform: rotateZ(0.25turn) translateX(20px) translateY(-20px);
-  transform-origin: top left;
-  font-size: 3em;
-  position: absolute;
-  z-index: 2;
-}
 
 
 
@@ -165,6 +158,8 @@
   height: 100%;
     width:100%;
     border-radius: 8%;
+    cursor: pointer;
+    
 }
 .overImg{
   overflow: hidden;
@@ -196,8 +191,9 @@
     background-size:0px 2px;
     background-position:bottom center;
     font-size: 2.5em;
-  left: 26%;
-  top: 32%;
+    left: 26%;
+    top: 32%;
+    vertical-align: middle;
     text-align: center;
   position: absolute;
   /*transform: scale(2.2); */
@@ -206,12 +202,19 @@
   transition: all 0.35s ease-out;
     color: white;
 }
+.contenu_text{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+}
 .card_projet:hover h2{
   /*  transform: scale(1); */
     /*transform: translate(0%, -60%);*/
     /*transform: scale(1.5);*/
-    left: 35%;
-    font-size: 1.5em;
+    left: 24%;
+    top: 20%;
+    font-size: 2.7em;
     opacity: 1;
     
 }
@@ -329,9 +332,54 @@
         }
           .contenu{
               font-size: 2em;
-              left: 30%;
+              left: 32%;
               top: 35%;
           }
+      }
+            @media (max-width: 500px){
+        .hero-image {
+          height: 400px ;
+        }
+          .contenu{
+              font-size: 2em;
+              left: 0%;
+              top: 35%;
+          }
+          .card_projet:hover h2{
+              /*  transform: scale(1); */
+              /*transform: translate(0%, -60%);*/
+              /*transform: scale(1.5);*/
+              left: 32%;
+              font-size: 1.5em;
+              opacity: 1;
+    
+          }
+          .card_projet:hover p{
+            left: 28.5%;
+          }
+
+
+      }
+     @media (max-width: 1090px){
+
+          .contenu{
+              font-size: 2em;
+              left: 24%;
+              top: 35%;
+          }
+          .card_projet:hover h2{
+              /*  transform: scale(1); */
+              /*transform: translate(0%, -60%);*/
+              /*transform: scale(1.5);*/
+              left: 32%;
+              font-size: 1.5em;
+              opacity: 1;
+    
+          }
+          .card_projet:hover p{
+            left: 28.5%;
+          }
+
 
       }
       @media (max-width : 1024px){
