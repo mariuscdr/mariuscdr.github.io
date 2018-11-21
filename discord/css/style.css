@@ -182,11 +182,11 @@
 }
 .contenu{
 	font-size: 2.5em;
-	left: 10%;
-	top: 10%;
+	left: 28%;
+	top: 25%;
 	position: absolute;
-	/*transform: scale(2); */
-    transform: translate(35%, 90%);
+	transform: scale(1.3); 
+    text-align: center;
 	transform-origin: top;
 	opacity: 1;
 	transition: all 0.25s ease-out;
@@ -194,7 +194,7 @@
 }
 .card_projet:hover h2{
     transform: scale(1); 
-    transform: translate(35%, 10%);
+    transform: translate(0%, -60%);
     opacity: 1;
     
 }
@@ -204,7 +204,7 @@
     background-size:0px 2px;
     background-position:bottom center;
     font-size: 1.5em;
-	left: 31%;
+	left: 32%;
 	top: 60%;
 	position: absolute;
 	transform: scale(2); 
