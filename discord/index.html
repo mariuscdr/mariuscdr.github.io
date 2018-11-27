@@ -36,8 +36,7 @@
  <section class="hero is-medium">
         <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
         	<br><br>
-          Mes centres d'interets <br><br>
-          <span class="header_line"></span>
+          Mes centres d'interets
         </h1>
         
       <div class="hero-body">
@@ -85,7 +84,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
     <section class="hero is-medium">
 
@@ -159,45 +157,83 @@
   </div>
 </section>
 
-<section>
+<section id="section_projets" href="#ancre">
     <br>
-    <h1 class="title has-text-centered section-titre">Mes Projets</h1>
+    <h1 class="title has-text-centered section-titre titre_mes_projets" id="projets">Mes Projets</h1>
     <br>
     <div id="larg">
-        <div class="columns is-desktop projet">
-            <div class="column is-12-mobile is-half-tablet is-one-third-desktop card_projet">
-                <div class="fond">
-                    
-                    <div class="overImg">
-                        
-                        <img src="./css/telechargements/program.jpg" class="img_projet"/>
-                        <div class="contenu_text">
-                            <h2 class="contenu">Vc-Redist</h2>
-                            <p class="soulignement">Telécharger</p>
-                        </div>
-                        
-                    </div>
-                </div>
+    <div class="columns is-3 is-desktop projet">
+        
+        <div class="column card_projet">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">test</h2>
+                    <p class="soulignement lien">telecharger</p>
             </div>
-            
-                        <div class="column is-12-mobile is-half-tablet is-one-third-desktop card_projet">
-                <div class="fond">
-                    <div class="overImg">
-                        <img src="./css/telechargements/program.jpg" class="img_projet"/>
-                    </div>
-                </div>
+					
+
+        </div>
+        <div class="espace"></div>
+        <div class="column card_projet">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">test</h2>
+                    <p class="soulignement lien">telecharger</p>
             </div>
-            
-                        <div class="column is-12-mobile is-half-tablet is-one-third-desktop card_projet">
-                <div class="fond">
-                    <div class="overImg">
-                        <img src="./css/telechargements/program.jpg" class="img_projet"/>
-                    </div>
-                </div>
+					
+
+        </div>
+        <div class="espace"></div>
+        <div class="column card_projet">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">test</h2>
+                    <p class="soulignement lien">telecharger</p>
             </div>
+					
+
+        </div>
+        
+        
+        
+         	
+
+        </div>
+        <div class="columns is-3 is-desktop projet">
+        
+        <div class="column card_projet">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">test</h2>
+                    <p class="soulignement lien">telecharger</p>
+            </div>
+					
+
+        </div>
+        <div class="espace"></div>
+        <div class="column card_projet">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">test</h2>
+                    <p class="soulignement lien">telecharger</p>
+            </div>
+					
+
+        </div>
+         <div class="espace"></div>
+        <div class="column card_projet" id="jqprojetsclick">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">test</h2>
+                    <p class="soulignement lien">telecharger</p>
+            </div>
+					
+
+        </div>
             
+        
+        
+        
+         	
+
         </div>
     </div>
+  <br><br>
+  
     
 </section>
     
@@ -233,12 +269,38 @@ $( document ).ready(function() {
 
     });
     
-    $('.column').hover(function(){
-        $('this').width(200 + "%");
+    var $cross = "<span><i class='far fa-times-circle fa-3x'></i></span>";
+    var $element = "<div class='hero is-fullheight autre_projets'></div>";
+   /* $("#jqprojetsclick").click(function()
+        {
+        $(".card_projet").unbind('mouseenter mouseleave');
+             $('html, body').animate({scrollTop: $("#section_projets").scrollTop()}, 5000);
+             $($element).appendTo("#larg");   
+         $(".autre_projets").prepend($cross);
             
-
+        
+        });
+*/
+        var positionFen = 0;
+       $("#jqprojetsclick").on('click', function(evt){
+        $positionFen = $(window).scrollTop();
+       // bloquer le comportement par défaut: on ne rechargera pas la page
+       evt.preventDefault(); 
+       /* le sélecteur $(html, body) permet de corriger un bug sur chrome 
+       et safari (webkit) */
+	$('html, body').stop().animate({scrollTop: $("#projets").offset().top - 24 +"px"}, 800 );
+                       $($element).appendTo("#larg");  
+          
+           $(".autre_projets").prepend($cross);
+        
+           
+           
+               $("span").click(function(){
+                   $(".autre_projets").remove();
+ $('html, body').stop().animate({scrollTop: parseInt($positionFen, 10)}, 800 );
+       
     });
-    
+    });
 
 
 
