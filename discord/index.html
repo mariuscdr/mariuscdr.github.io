@@ -164,31 +164,37 @@
     <div id="larg">
     <div class="columns is-3 is-desktop projet">
         
-        <div class="column card_projet">
+        <div class="column card_projet precisions">
 					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
-                    <h2 class="titre_projet">test</h2>
+                    <h2 class="titre_projet">VC-Redist</h2>
                     <p class="soulignement lien">telecharger</p>
+                    <p class="description">VC_Redist vous permettera de lancer mes programmes c++ (ces programmes fonctionnent seulement sur window)</p>
+            </div>
+					
+
+        </div>
+        <div class="espace" ></div>
+        <div class="column card_projet test precisions">
+					<div class="overImg"><img src="./css/telechargements/jumpgame.png" class="img_projet"/>
+                        
+                    <h3 class="titre_projet">Jumpgame</h3>
+                    <p class="soulignement lien">telecharger</p>
+                    <p class="description">Jumpgame est le premier jeu que j'ai developpé en c++ avec la SFML. Ce jeu n'est pas fini, il me reste plus qu'à terminer les maps, je vous le propose en version bêta
+
+</p>
+
+
             </div>
 					
 
         </div>
         <div class="espace"></div>
-        <div class="column card_projet">
-					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
-                    <h2 class="titre_projet">test</h2>
+        <div class="column card_projet precisions">
+					<div class="overImg"><img src="./css/telechargements/Circle.png" class="img_projet"/>
+                    <h2 class="titre_projet">circle</h2>
                     <p class="soulignement lien">telecharger</p>
-            </div>
-					
-
-        </div>
-        <div class="espace"></div>
-        <div class="column card_projet">
-					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
-                    <h2 class="titre_projet">test</h2>
-                    <p class="soulignement lien">telecharger</p>
-            </div>
-					
-
+                    <p class="description">Circle, un jeu pour s'occuper, jusqu'à quel niveau irez-vous?</p>
+</div>
         </div>
         
         
@@ -198,28 +204,71 @@
         </div>
         <div class="columns is-3 is-desktop projet">
         
-        <div class="column card_projet">
+        <div class="column card_projet precisions">
 					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
-                    <h2 class="titre_projet">test</h2>
+                    <h2 class="titre_projet">repère</h2>
                     <p class="soulignement lien">telecharger</p>
+                    <p class="description">ce programme python a été concu pour etre utilisé sur calculatrice supportant le python</p>
             </div>
 					
 
         </div>
         <div class="espace"></div>
-        <div class="column card_projet">
+        <div class="column card_projet precisions">
 					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
-                    <h2 class="titre_projet">test</h2>
+                    <h2 class="titre_projet">Binaire</h2>
                     <p class="soulignement lien">telecharger</p>
+                    <p class="description">ce programme permet de convertir un nombre entré en binaire)</p>
             </div>
 					
 
         </div>
-         <div class="espace"></div>
-        <div class="column card_projet" id="jqprojetsclick">
+        <div class="espace"></div>
+        <div class="column card_projet precisions">
 					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
-                    <h2 class="titre_projet">test</h2>
+                    <h2 class="titre_projet">Binary</h2>
+                    <p class="soulignement lien">télécharger</p>
+                    <p class="description">Binary est mon premier projet dans lequel j'inclue le javascript. il consiste à convertir un nombre de : 
+                    - decimal -> hexadecimal -> binaire
+                    - hexadecimal -> decimal -> binaire
+                    - binaire -> hexadecimal -> binaire</p>
+            </div>
+					
+
+        </div>
+            
+        
+        
+        
+         	
+
+        </div>
+                <div class="columns is-3 is-desktop projet">
+        
+        <div class="column card_projet precisions">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">César</h2>
                     <p class="soulignement lien">telecharger</p>
+                    <p class="description">VC_Redist vous permettera de lancer mes programmes c++ (ces programmes fonctionnent seulement sur window)</p>
+            </div>
+					
+
+        </div>
+        <div class="espace"></div>
+        <div class="column card_projet precisions">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">Dodger</h2>
+                    <p class="soulignement lien">telecharger</p>
+                    <p class="description">VC_Redist vous permettera de lancer mes programmes c++ (ces programmes fonctionnent seulement sur window)</p>
+            </div>
+					
+
+        </div>
+        <div class="espace"></div>
+        <div class="column card_projet precisions">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">Coming Soon</h2>
+                    <p class="soulignement lien">...</p>
             </div>
 					
 
@@ -271,23 +320,16 @@ $( document ).ready(function() {
     
     var $cross = "<span><i class='far fa-times-circle fa-3x'></i></span>";
     var $element = "<div class='hero is-fullheight autre_projets'></div>";
-   /* $("#jqprojetsclick").click(function()
-        {
-        $(".card_projet").unbind('mouseenter mouseleave');
-             $('html, body').animate({scrollTop: $("#section_projets").scrollTop()}, 5000);
-             $($element).appendTo("#larg");   
-         $(".autre_projets").prepend($cross);
-            
-        
-        });
-*/
+    var $structure = "<h1 class='title has-text-centered section-titre titre_mes_projets' id='projets'>Mes Projets</h1><br><div id='larg'><div class='columns is-3 is-desktop projet'</div></div>";
+    var $description;
+    var $titre;
+    var $lien;
+    var $image;
+    
         var positionFen = 0;
-       $("#jqprojetsclick").on('click', function(evt){
+function PageSup(){
         $positionFen = $(window).scrollTop();
-       // bloquer le comportement par défaut: on ne rechargera pas la page
-       evt.preventDefault(); 
-       /* le sélecteur $(html, body) permet de corriger un bug sur chrome 
-       et safari (webkit) */
+
 	$('html, body').stop().animate({scrollTop: $("#projets").offset().top - 24 +"px"}, 800 );
                        $($element).appendTo("#larg");  
           
@@ -300,7 +342,28 @@ $( document ).ready(function() {
  $('html, body').stop().animate({scrollTop: parseInt($positionFen, 10)}, 800 );
        
     });
-    });
+    }
+       $("#jqprojetsclick").on('click', PageSup);
+    
+    $(".precisions").click(function(){
+        //$(".autre_projets").css({opacity: 0.1});
+        PageSup();
+        $titre = $(this).find(".titre_projet").text();
+        $(".autre_projets").append('<h1 class="titre_precision" data-aos="zoom-in-down" data-aos-delay="500">' + $titre + '</h1>');
+                
+       /* $description = $(this).find(".description").text();
+        $(".autre_projets").append("<p class='description_text'>" + $description + "</p>");*/
+        $image = $(this).find(".overImg").find(".img_projet").attr("src");
+        $image = "<div class='image_des'><img src='" + $image + "'/></div>" 
+        $(".autre_projets").append($image);
+        $description = $(this).find(".overImg").find(".description").text();
+        $description = "<div class='text_description'><p>" + $description + "</p></div>"
+        $(".autre_projets").append($description);
+        
+        
+                
+        
+    })
 
 
 
@@ -311,9 +374,6 @@ $( document ).ready(function() {
 </script>
 </body>
 </html>
-
-
-
 
 
 <!--<section class="hero is-fullheight biographie">
