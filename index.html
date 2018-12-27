@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,297 +21,10 @@
     <link rel="stylesheet" href="https://www.neuralia.co/css/landing/magnific-popup.css" />
     <link rel="stylesheet" href="https://www.neuralia.co/css/landing/flexslider.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="./css/style.css">
   <title>Marius Coudray</title>
-  <style>
-  body{
-    overflow-x: hidden;
-    scroll-behavior : smooth;
-  }
-    *{
-      margin: 0;
-    }
-    hr{
-      margin: 0;
-    }
-    .accueil{
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)
-      ),url('./telechargements/mountainun2.jpg');
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
-    .software{
-          background: linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)
-      ),url('./telechargements/program.jpg');
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    font-size: 1em;
-    text-align: center;
-    font-weight: bold;
-
-
-    }
-
-    .biographie{
-    background: white;
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: groove;
-    }
-    #avatar{
-      width: 300px;
-      border-radius: 10px;
-      float: left;
-      margin-right: 20px;
-    }
-    #nom{
-      font-size: 4em;
-      padding-top: 0vw;
-      border: groove;
-    }
-    #card-presentation{
-      font-size: 2em;
-      color: white;
-      width: 40%;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .footer{
-      padding: 2rem 1.5rem 3rem;
-    }
-    .container{
-      padding-left: 10vw;
-      padding-right: 10vw;
-    }
-    .present{
-      padding-left: 0vw;
-      padding-right: 0vw;
-    }
-    .intertitre{
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-    }
-    #div-bio{
-      padding-top: 
-      border: groove;
-    }
-    .web:hover{
-      color: white;
-    }
-    .logo-souris{
-      width: 3%;
-      height: 3%;
-    }
-    .position-souris{
-      text-align: center;
-    }
-    .icon-competences{
-              margin-left: calc(50% - 13px);
-        padding-bottom: 40px;
-    }
-
-
-    
-    @media (max-width: 1000px){
-      #avatar{
-        width: 100px;
-        border-radius: 10px;
-        float: left;
-        margin-right: 10px;
-      }
-      #nom{
-        font-size: 1.5em;
-      margin-bottom: 0; 
-      }
-      #card-presentation{
-        color: white;
-        width: 100%;
-      }
-    }
-    .img-projet{
-      width: 100%;
-      background-size: cover;
-    }
-    .titre-projet{
-      font-size: 2em;
-      font-weight: bold;
-    }
-    .titre{
-        padding-bottom: 130px;
-      }
-      #nom, #text_description{
-        color: white;
-      }
-      .content{
-        text-align: justify;
-        text-justify: inter-word;
-        line-height: 28px;
-        position: sticky;
-      }
-      .titre-competences{
-        font-weight: bold;
-        text-align: center;
-        font-size: 2em;
-      }
-      .colonne-competences{
-        height: 300px;
-      }
-      .icon-competences{
-        margin-left: calc(40% - 11px);
-        padding-bottom: 40px;
-        width: 30%;
-        height: 30%;
-        position: static;
-      }
-      .hero-image{
-        width:100%;
-        height: 350px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-      }
-      .acceuilPortfolio{
-        background: linear-gradient(
-            rgba(0, 0, 0, 0.5), 
-            rgba(0, 0, 0, 0.5)
-          ),url('./images/bg-home-min.jpg');
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .is-rounded{
-        border-radius: 10px !important;
-      }
-      @media (max-width: 400px){
-        .hero-image {
-          height: 200px !important;
-        }
-        .icon-competences{
-        margin-left: calc(40% - 11px);
-        padding-bottom: 0px;
-        width: 30%;
-        height: 30%;
-      }
-
-      }
-
-      @media (max-width: 740px){
-        .hero-image {
-          height: 400px ;
-        }
-
-      }
-      @media (max-width : 1024px){
-        .presentation{
-          display: none;
-        }
-        .acceuilPortfolio{
-          background: linear-gradient(
-              rgba(128, 79, 144, 0.5), 
-              rgba(128, 79, 144, 0.5)
-            ),url();
-        }
-        .hero-image {
-          width:100%;
-          height: 350px;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          position: relative;
-        }
-        .section-titre{
-          padding-bottom: 30px;
-        }
-        .titre-projet{
-          font-size: 2em;
-        }
-      }
-      @media (max-width : 1524px){
-        .presentation{
-          position: absolute;
-          top: 84vh;
-          left: 60vw;
-          width: 400px;
-        }
-        #text{
-            font-size: 20px !important;
-            width: 90%;
-        }
-      }
-
-      .slick-slide {
-        margin: 0px 20px;
-      }
-
-      .slick-slide img {
-        width: 100%;
-      }
-
-      .slick-prev:before,
-      .slick-next:before {
-        color: black;
-      }
-
-      .slick-slide {
-        transition: all ease-in-out .3s;
-        opacity: .2;
-      }
-      
-      .slick-active {
-        opacity: .5;
-      }
-
-      .slick-current {
-        opacity: 1;
-      }
-      .titre-card{
-        font-weight: bold;
-      }
-      .white{
-        color: white !important;
-      }
-      #overlay {
-          position: fixed;
-          display: none;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: rgba(0,0,0,0.85);
-          z-index: 20;
-          cursor: pointer;
-      }
-      .is-4{
-        cursor: pointer;
-      }
-      #text{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          font-size: 50px;
-          color: white;
-          width: 60%;
-          transform: translate(-50%,-50%);
-          -ms-transform: translate(-50%,-50%);
-      }
-
-  </style>
 </head>
 <body>
 <section class="hero is-fullheight accueil">
@@ -324,8 +38,7 @@
  <section class="hero is-medium">
         <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
         	<br><br>
-          Mes centres d'interets <br><br>
-          <span class="header_line"></span>
+          Mes centres d'interets
         </h1>
         
       <div class="hero-body">
@@ -373,7 +86,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
     <section class="hero is-medium">
 
@@ -447,148 +159,113 @@
   </div>
 </section>
 
-<section>
-  <div class="hero-body">
-      <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
-        C++
-        <br><br>
-        <span class="header_line"></span>
-      </h1>
-    <div class="container">
-        <div class="projet">
-          <div class="columns" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom">
-            <div class="column is-two-thirds">
-              <img src="https://www.cssdebutant.com/include/images/css-twitter.jpg" class="img-projet visual">
-          </div>
-          <div class="column">
-            <h1 class="titre-projet">vc-redist</h1>
-            <p>Si vous voulez lancer mes programmes, pour des question de compatibilité, je vous propose ce package pour vous éviter d'éventuelles erreures (les programmes proposés sont compilés pour windows) </p><br>
-            <a class="button is-link" href="telechargements/vcredist.zip">Télécharger&nbsp;&nbsp;&nbsp;<i class="fas fa-download"></i></i>
-            </a></a>
-          </div>
-        </div>  
-      </div>
-      <br><br>
-      <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
-        <div class="columns">
-          <div class="column is-two-thirds"  id="shar">
-            <img src="jumpgame.png" class="img-projet">
-          </div>
-          <div class="column">
-            <h1 class="titre-projet">Jumpgame</h1>
-            <p>Jumpgame est le premier jeu que j'ai developpé en c++ avec la SFML. Ce jeu n'est pas fini, il me reste plus qu'à terminer les maps, je vous le propose en version bêta</p><br>
-            <a class="button is-link" href="telechargements/jumpgame.zip">Télécharger&nbsp;&nbsp;&nbsp;<i class="fas fa-download"></i></a>
-          </div>
-        </div>  
-      </div>
-      <br><br>
-      <div class="projet">
-        <div class="columns" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom">
-          <div class="column is-two-thirds">
-            <img src="Circle.png" class="img-projet">
-          </div>
-          <div class="column">
-            <h1 class="titre-projet">Circle</h1>
-            <p>Circle, un jeu pour s'occuper, jusqu'à quel niveau irez-vous?  </p><br>
-            <a class="button is-link" href="telechargements/circle.zip">Télécharger&nbsp;&nbsp;&nbsp;<i class="fas fa-download"></i></i></a></a>
-          </div>
-        </div>  
-      </div>
-      <br><br><br><br>
-        <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
-          Python
-          <br><br>
-          <span class="header_line"></span>
-        </h1>
-      <div class="projet">
-        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
-          <div class="column is-two-thirds">
-            <img src="python.png" class="img-projet">
-          </div>
-          <div class="column">
-            <h1 class="titre-projet">repère</h1>
-            <p>ce programme python a été concu pour etre utilisé sur calculatrice supportant le python.</p><br>
-            <a class="button is-link" href="plan.py">Télécharger&nbsp;&nbsp;&nbsp;<i class="fas fa-download"></i></a>
-          </div>
-        </div>  
-      </div>
-      <br><br>
-      <div class="projet">
-        <div class="columns" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom">
-          <div class="column is-two-thirds">
-            <img src="python.png" class="img-projet">
-          </div>
-          <div class="column">
-            <h1 class="titre-projet">binaire</h1>
-            <p>ce programme permet de convertir un nombre entré en binaire </p><br>
-            <a class="button is-link" href="binaire.py">Télécharger&nbsp;&nbsp;&nbsp;<i class="fas fa-download"></i></a></a>
-          </div>
-        </div>  
-      </div>
-      <br><br>
-      <!--<div class="projet">
-        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
-          <div class="column is-two-thirds">
-            <img src="http://placehold.it/700x300" class="img-projet">
-          </div>
-          <div class="column">
-            <h1 class="titre-projet">Titre</h1>
-            <p>contenucontenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu contenu  </p><br>
-            <a class="button is-link">Visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a></a>
-          </div>
-        </div>  
-      </div>-->
-      <br>
-      <h1 class="title has-text-centered section-titre" id="competences-type" data-aos="zoom-in-down">
-          <br><br>
-          WEB
-          <br><br>
-          <span class="header_line"></span>
-        </h1>
-      <div class="projet">
-        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
-          <div class="column is-two-thirds">
-            <img src="telechargements/binary.png" class="img-projet">
-          </div>
-          <div class="column">
-            <h1 class="titre-projet">Binary</h1>
-            <p>convert-Bin est mon premier projet dans lequel j'inclue le javascript. il consiste à convertir un nombre de : <br><br>
-            - decimal -> hexadecimal -> binaire<br>
-            - hexadecimal -> decimal -> binaire<br>
-            - binaire -> hexadecimal -> binaire  </p><br>
-            <a class="button is-link" href="https://mariuscdr.github.io/binaire.html" target="_blank">visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>  
-      </div>
-      <br><br>
-       <div class="projet">
-        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
-          <div class="column is-two-thirds">
-            <img src="http://placehold.it/700x300" class="img-projet">
-          </div>
-          <div class="column">
-            <h1 class="titre-projet">César</h1>
-            <p>voici un projet que j'ai fait pour m'entrainer, un site qui code en César</p><br>
-            <a class="button is-link" href="https://mariuscdr.github.io/cesar.html" target="_blank">visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>  
-      </div>
-      <br><br>
-      <div class="projet">
-        <div class="columns" data-aos="fade-up-right" data-aos-anchor-placement="bottom-bottom">
-          <div class="column is-two-thirds">
-            <img src="http://placehold.it/700x300" class="img-projet">
-          </div>
-          <div class="column">
-            <h1 class="titre-projet">dodger</h1>
-            <p>je vous présente mon premier jeu créé en javascript, attention, il peut etre addictif</p><br>
-            <a class="button is-link" href="https://mariuscdr.github.io/phaser/index.html" target="_blank">visiter le site&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>  
-      </div>
+<section id="section_projets" href="#ancre">
+    <br>
+    <h1 class="title has-text-centered section-titre titre_mes_projets" id="projets">Mes Projets</h1>
+    <br>
+    <div id="larg">
+    <div class="columns is-3 is-desktop projet">
+        
+        <div class="column card_projet precisions" data-aos="zoom-in-down">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">VC-Redist</h2>
+                    <a class="soulignement lien" href="css/telechargements/vcredist.zip">telecharger</a>
+                    <p class="description">VC_Redist vous permettera de lancer mes programmes c++ (ces programmes fonctionnent seulement sur window)</p>
+            </div>
+					
+
+        </div>
+        <div class="espace" ></div>
+        <div class="column card_projet test precisions" data-aos="zoom-in-down">
+					<div class="overImg"><img src="./css/telechargements/jumpgame.png" class="img_projet"/>
+                        
+                    <h3 class="titre_projet">Jumpgame</h3>
+                    <a class="soulignement lien" href="css/telechargements/jumpgame.zip">telecharger</a>
+                    <p class="description">Jumpgame est le premier jeu que j'ai developpé en c++ avec la SFML. Ce jeu n'est pas fini, il me reste plus qu'à terminer les maps, je vous le propose en version bêta
+
+</p>
+
+
+            </div>
+					
+
+        </div>
+        <div class="espace"></div>
+        <div class="column card_projet precisions" data-aos="zoom-in-down">
+					<div class="overImg"><img src="./css/telechargements/Circle.png" class="img_projet"/>
+                    <h2 class="titre_projet">circle</h2>
+                    <a href="css/telechargements/circle.zip" class="soulignement lien">telecharger</a>
+                    <p class="description">Circle, un jeu pour s'occuper, jusqu'à quel niveau irez-vous?</p>
+</div>
+        </div>
+        
+        
+        
+         	
+
+        </div>
+        <div class="columns is-3 is-desktop projet">
+        
+        <div class="column card_projet precisions" data-aos="zoom-in-down">
+					<div class="overImg"><img src="./css/telechargements/rep%C3%A8re.png" class="img_projet"/>
+                    <h2 class="titre_projet">repère</h2>
+                    <a href="plan.py" class="soulignement lien">telecharger</a>
+                    <p class="description">ce programme python a été concu pour etre utilisé sur calculatrice supportant le python</p>
+            </div>
+					
+
+        </div>
+        <div class="espace"></div>
+        <div class="column card_projet precisions" data-aos="zoom-in-down">
+					<div class="overImg"><img src="./css/telechargements/binaire.png" class="img_projet"/>
+                    <h2 class="titre_projet">Binary</h2>
+                    <a href="https://mariuscdr.github.io/binaire.html" class="soulignement lien">telecharger</a>
+                    <p class="description">convert-Bin est mon premier projet dans lequel j'inclue le javascript. il consiste à convertir un nombre en hexadecimal, decimal et binaire</p>
+            </div>
+					
+
+        </div>
+        <!--<div class="espace"></div>
+        <div class="column card_projet precisions">
+					<div class="overImg"><img src="./css/telechargements/program.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">Binary</h2>
+                    <p class="soulignement lien">télécharger</p>
+                    <p class="description">Binary est mon premier projet dans lequel j'inclue le javascript. il consiste à convertir un nombre de : 
+                    - decimal -> hexadecimal -> binaire
+                    - hexadecimal -> decimal -> binaire
+                    - binaire -> hexadecimal -> binaire</p>
+            </div>
+					
+
+        </div>-->
+            
+        
+        
+        <div class="espace"></div>
+        <div class="column card_projet" id="autre" data-aos="zoom-in-down">
+					<div class="overImg"><img src="./css/telechargements/autreprojets.jpg" class="img_projet"/>
+                    <h2 class="titre_projet">Tous mes projets</h2>
+                    <a class="soulignement lien">voir</a>
+            </div>
+					
+
+        </div>
+            
+         </div>
+        
     </div>
-  </div>
+  <br><br>
+  
+    
 </section>
+    
+    
+    
+    
+    
+    
+    
+    
   <hr>
     <footer class="footer">
     <div class="content has-text-centered">
@@ -613,8 +290,102 @@ $( document ).ready(function() {
     }
 
     });
+    
+    var $cross = "<span><i class='far fa-times-circle fa-3x'></i></span>";
+    var $element = "<div class='hero is-fullheight autre_projets'></div>";
+    var $structure = "<h1 class='title has-text-centered section-titre titre_mes_projets' id='projets'>Mes Projets</h1><br><div id='larg'><div class='columns is-3 is-desktop projet'</div></div>";
+    
+    var $tousLesProjets = "<div class='collapsible collapsibleProjet Projets'>"
+    + "<input id='collapsible5' type='checkbox' name='collapsible'>"
+    + "<label style='color : white' for='collapsible5'>Binary</label> "
+    + "<div class='collapsible-body'>"
+    + "<span>Shar est un reseau social, où vous pourrez partager votre passion, vos créations et rejoindre vos amis en vous inscrivant gratuitement ! <br><a href='https://mariuscdr.github.io/binaire.html' target='_blank'> " 
+    + "<button class='btn-secondary btn-projet'>Visiter le site</button></a></span>"
+    + "</div>"
+    + "<div class='collapsible collapsibleProjet'>"
+    + "<input id='collapsible6' type='checkbox' name='collapsible'>"
+    + "<label style='color : white' for='collapsible6'>César</label> "
+    + "<div class='collapsible-body'>"
+    + "<span>Shar est un reseau social, où vous pourrez partager votre passion, vos créations et rejoindre vos amis en vous inscrivant gratuitement ! <br><a href='https://mariuscdr.github.io/cesar.html' target='_blank'> " 
+    + "<button class='btn-secondary btn-projet'>Visiter le site</button></a></span>"
+    + "</div>"
+     + "<div class='collapsible collapsibleProjet'>"
+    + "<input id='collapsible7' type='checkbox' name='collapsible'>"
+    + "<label style='color : white' for='collapsible7'>Dodger</label> "
+    + "<div class='collapsible-body'>"
+    + "<span>Shar est un reseau social, où vous pourrez partager votre passion, vos créations et rejoindre vos amis en vous inscrivant gratuitement ! <br><a href='https://mariuscdr.github.io/phaser/index.html' target='_blank'> " 
+    + "<button class='btn-secondary btn-projet'>Visiter le site</button></a></span>"
+    + "</div>";
+    
+    var $description;
+    var $titre;
+    var $lien;
+    var $image;
+    
+        var positionFen = 0;
+function PageSup(){
+        $positionFen = $(window).scrollTop();
 
+	$('html, body').stop().animate({scrollTop: $("#projets").offset().top - 24 +"px"}, 800 );
+                       $($element).appendTo("#larg");  
+          
+           $(".autre_projets").prepend($cross);
+        
+           
+           
+               $("span").click(function(){
+                   $(".autre_projets").remove();
+                   $(".mylink").remove();
+                   
+ $('html, body').stop().animate({scrollTop: parseInt($positionFen, 10)}, 800 );
+       
+    });
+    }
+      // $("#jqprojetsclick").on('click', PageSup);
+    
+    $(".precisions").click(function(){
+        //$(".autre_projets").css({opacity: 0.1});
+        PageSup();
+        $titre = $(this).find(".titre_projet").text();
+        $(".autre_projets").append('<h1 class="titre_precision" data-aos="zoom-in-down" data-aos-delay="500">' + $titre + '</h1>');
+                
+       /* $description = $(this).find(".description").text();
+        $(".autre_projets").append("<p class='description_text'>" + $description + "</p>");*/
+        $image = $(this).find(".overImg").find(".img_projet").attr("src");
+        $image = "<div class='image_des'><img src='" + $image + "'/></div>";
+        if($(window).width() > 768)
+            {
+                $(".autre_projets").append($image);
+            }
+        
+        $description = $(this).find(".overImg").find(".description").text();
+        $description = "<div class='text_description'><p>" + $description + "</p></div>"
+        $(".autre_projets").append($description);
+          
+    });
+    
+    $("#autre").click(function(){
+        $positionFen = $(window).scrollTop();
 
+	$('html, body').stop().animate({scrollTop: $("#projets").offset().top + 240 +"px"}, 800 );
+                       $($element).appendTo("#larg");  
+          
+           $(".autre_projets").prepend($cross);
+        
+           
+           
+               $("span").click(function(){
+                   $(".autre_projets").remove();
+                   $(".mylink").remove();
+                   
+ $('html, body').stop().animate({scrollTop: parseInt($positionFen, 10)}, 800 );
+       
+    });
+        $(".autre_projets").append($tousLesProjets); 
+        $("body").append('    <link class="mylink" rel="stylesheet" href="https://unpkg.com/papercss@1.5.3/dist/paper.min.css">')
+        
+        
+    });
 
 });    
 
@@ -623,9 +394,6 @@ $( document ).ready(function() {
 </script>
 </body>
 </html>
-
-
-
 
 
 <!--<section class="hero is-fullheight biographie">
