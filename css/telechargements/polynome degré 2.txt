@@ -14,7 +14,7 @@ def fr(x):
     return(resultat)
 
 
-print("veuillez  inserer vote \nexpression sous forme \nax²2+bx+c")
+print("veuillez  inserer vote \nexpression sous forme \naxÂ²2+bx+c")
 
 formule = input("expression : ")
 
@@ -27,14 +27,14 @@ split = split.split('x')
 if split[0] == '':
   split[0] = "1"
 
-if split[1] == split[1] == '²+' or split[1] == '²-' or split[1] == split[1] == '**2+' or split[1] == '**2-':
+if split[1] == split[1] == 'Â²+' or split[1] == 'Â²-' or split[1] == split[1] == '**2+' or split[1] == '**2-':
   split[1] = "1"
 
 if split[2] == '':
   split[2] = "0" 
 
 split = " ".join(split)
-split = split.split('²')
+split = split.split('Â²')
 split = "".join(split)
 split = split.split(' ')
 #print(split)
@@ -83,7 +83,7 @@ if rep == 1:
     az = az+0.1
     
 print(type(alpha))    
-result = "\n\n{}(x - {})²+ {}\nS({}; {})\n\n{}(x - {})² + {}\nS({}; {})".format(ap, alpha, str(beta), alpha, str(beta), round(decimal(ap), 4), round(decimal(alpha), 4), round(decimal(beta), 4), round(decimal(alpha), 4), round(decimal(beta), 4))
+result = "\n\n{}(x - {})Â²+ {}\nS({}; {})\n\n{}(x - {})Â² + {}\nS({}; {})".format(ap, alpha, str(beta), alpha, str(beta), round(decimal(ap), 4), round(decimal(alpha), 4), round(decimal(beta), 4), round(decimal(alpha), 4), round(decimal(beta), 4))
 result = result.replace('+-','-',len(result))
 result = result.replace('-+','-', len(result))
 result = result.replace('--','+', len(result))
