@@ -1,0 +1,109 @@
+from math import *
+from cmath import *
+def fr(x):
+    n,d,e,z=0,0,1,x
+    #print("z = {} modulo z = {}".format(z, z%1))
+    if z%1 == 0:
+      return(x)
+    while abs(n/e-x)>1e-6:
+        z=1/(z%1)
+        d,e=e,e*int(z)+d
+        n=round(x*e,0)
+        #print(int(n),"/",e)
+        resultat = "{}/{}".format(int(n), e)
+    return(resultat)
+
+def decimal(x):
+    print(type(x))
+    print(x)
+    verification = str(x).find("/")
+    if verification == -1:
+        return(x)
+    else:
+        x = x.split("/")
+        x = " ".join(x)
+        x = x.split(' ')
+        #print(x)
+        x = int(x[0]) / int(x[1])
+    return (x)
+
+
+print("veuillez  inserer vote \nexpression sous forme \nax²2+bx+c")
+
+formule = input("expression : ")
+
+verif = formule.find("/")
+#print(verif)
+
+split = "".join(formule)
+split = split.split('x')
+#print(split)
+if split[0] == '':
+  split[0] = "1"
+
+if split[1] == split[1] == '²+' or split[1] == '²-' or split[1] == split[1] == '**2+' or split[1] == '**2-':
+  split[1] = "1"
+
+if split[2] == '':
+  split[2] = "0" 
+
+split = " ".join(split)
+split = split.split('²')
+split = "".join(split)
+split = split.split(' ')
+#print(split)
+
+
+  
+
+a = float(decimal(split[0]))
+b = float(decimal(split[1]))
+c = float(decimal(split[2]))
+alpha = -b/(2*a)
+if a == alpha:
+  alpha = 1
+  
+beta = (4*a*c - b**2) / (4*a)
+alpha = fr(alpha)
+beta = fr(beta)
+
+verification = split[0].find("/")
+ap = fr(a)
+
+
+x = 1
+az = 1
+rep = int(input("verifier (0 = non / 1 = oui) ? "))
+if rep == 1:
+  alpha = str(alpha)
+  beta = str(beta)
+  while az < 100:
+    alpha = -b/(2*az)
+#    if a == alpha:
+ #       alpha = 1
+  
+    beta = (4*az*c - b**2) / (4*az)
+    alpha = fr(alpha)
+    beta = fr(beta)
+    alpha = str(alpha)
+    beta = str(beta)
+
+    dev = az*x**2+b*x+c
+    can = az*(x - float(decimal(alpha)))**2 + float(decimal(beta))
+    if dev != can:
+      print("\npas d'egalite pour a = {}".format(fr(az)))
+      print("alpha = {}, beta = {}".format(alpha, beta))
+
+    az = az+0.1
+    
+print(type(alpha))    
+result = "\n\n{}(x - {})²+ {}\nS({}; {})\n\n{}(x - {})² + {}\nS({}; {})".format(ap, alpha, str(beta), alpha, str(beta), round(decimal(ap), 4), round(decimal(alpha), 4), round(decimal(beta), 4), round(decimal(alpha), 4), round(decimal(beta), 4))
+result = result.replace('+-','-',len(result))
+result = result.replace('-+','-', len(result))
+result = result.replace('--','+', len(result))
+result = result.replace('- -','+ ', len(result))
+result = result.replace('- +','-', len(result))
+result = result.replace('+ -','- ', len(result))
+result = result.replace('+ +','+', len(result))
+result = result.replace('++','+', len(result))
+print(result)
