@@ -26,7 +26,7 @@
 
 }
 .h1titre:hover{
-	font-size: 3vw;
+	font-size: 2.2vw;
 }
 
 .h1paysage{
@@ -42,7 +42,7 @@
 
 }
 .h1paysage:hover{
-	font-size: 3vw;
+	font-size: 2.2vw;
 }
 
 header{
@@ -111,4 +111,58 @@ li {
 #paysage{
 position: absolute;
 top: 100%;
+}
+
+.defilement{
+	z-index: 1;
+	position: relative;
+	transform: translate(-50%, -50%);
+	top: 50vh;
+	left: 55vw;
+	width: 40vw;
+	transition: all 0.40s ;
+}
+
+
+.defilement:hover .fleche{
+opacity: 0.3;
+}
+
+.fleche{
+	position: absolute;
+	height: 100%;
+	width: 20%;
+	font-size: 2em;
+	transition: all 0.30s ease-out;
+	opacity: 0;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.defilement:hover .fleche:hover{
+	opacity: 1;
+}
+
+
+
+#fl-right
+{
+	transform: translate(-100%, 0%);
+	margin-top: 0%;
+	margin-left: 100%;
+}
+
+div i{
+	position: relative;
+	transform: translate(-50%, -50%);
+	top: 45%;
+	left: 45%;
+	font-size: 3vw;
+	color: white;
+
+}
+
+#fl-left
+{
+	margin-top: 0%;
+	margin-left: 0%;
 }
