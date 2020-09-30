@@ -1,75 +1,61 @@
-$( document ).ready(function() {
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script type="text/javascript" src="./javascript/main.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+	<title>galery</title>
+</head>
+<body>
 
-  $('#anim-titre').css(
-    {
-     'margin-top' : +($(window).height()*0.5) + "px"
-     });
+	<section class="hero is-fullheight" id="titre">
+	      <h1 class="h1titre" id="anim-titre">
+	        galery
+	      </h1>
+		<section class="menu">
+			<nav>
+				<ul>
+					<li data-aos="fade-down" data-aos-delay="500"><p class="soulignement">paysage</p></li>
+					<li data-aos="fade-down" data-aos-delay="800"><p class="soulignement" >batiments</p></li>
+					<li data-aos="fade-up" data-aos-delay="1000"><p class="soulignement">lieux</p></li>
+					<li data-aos="fade-down" data-aos-delay="1100"><p class="soulignement">animaux</p></li>
+				</ul>
+			</nav>
+		</section>
+	</section>
 
-     $('#anim-paysage').css(
-       {
-        'margin-top' : +($(window).height()*1.5) + "px"
-        });
+<section class="hero is-fullheight" id="paysage">
+		<h1 class="h1paysage" id="anim-paysge">
+			paysage
+		</h1>
 
+		<aside class="defilement" id="defilement">
+			<div class="fleche" id="fl-right"><i class="far fa-arrow-alt-circle-right"></i></div>
+			<div class="fleche" id="fl-left"><i class="far fa-arrow-alt-circle-left"></i></div>
+			<img src="./CSS/image/titre.jpg" alt="">
+		</aside>
 
-$(window).scroll(function () {
-    if ($(this).scrollTop() < $(window).height()/1.5)
-      {
-         $('#anim-titre').css(
-           {
-            'margin-top' : +($(window).height()*0.5) + $(this).scrollTop()*0.2 + "px"
-            });
-       }
+</section>
 
-    });
-
-  $(window).scroll(function () {
-      if ($(this).scrollTop() < $(window).height()/8)
-        {
-           $('#anim-paysage').css(
-             {
-              'margin-top' : +($(window).height()*0.5) + $(this).scrollTop()/10 + "px"
-              });
-         }
-
-        });
-
-
-
-    var clic = 0;
-    $('#defilement').click(function() {
-
-       $('#fl-right').click(function() 
-       { 
-            alert("flèche droite");
-            return false;;
-          
-      });
-        $('#fl-left').click(function() 
-       { 
-            alert("flèche gauche");
-            return false;;
-          
-      });
-
-
-      if (clic == 0)
-      {
-        $('.defilement').css(
-          {
-            'width' : 55 + "vw"
-          })
-          clic = 1;
-      }
-      else if (clic == 1)
-      {
-        $('.defilement').css(
-          {
-            'width' : 40 + "vw"
-          })
-          clic = 0;
-      }
-
-    });
+<!--<aside id="titre">
+	<h1>Galery</h1>
+</aside>-->
 
 
-});
+<script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
