@@ -1,8 +1,4 @@
-
-
 $( document ).ready(function() {
-
-
 
   $('#anim-titre').css(
     {
@@ -13,8 +9,10 @@ $( document ).ready(function() {
        {
         'margin-top' : +($(window).height()*1.5) + "px"
         });
+
+
 $(window).scroll(function () {
-    if ($(this).scrollTop() < $(window).height()/1.2)
+    if ($(this).scrollTop() < $(window).height()/1.5)
       {
          $('#anim-titre').css(
            {
@@ -29,23 +27,31 @@ $(window).scroll(function () {
         {
            $('#anim-paysage').css(
              {
-              'margin-top' : +($(window).height()*0.5) + $(this).scrollTop()/3 + "px"
+              'margin-top' : +($(window).height()*0.5) + $(this).scrollTop()/10 + "px"
               });
          }
 
         });
 
-    $('#fl-right').click(function() {
-      $('#defilement').css(
-        {
 
-        }
-      )
-
-    });
 
     var clic = 0;
     $('#defilement').click(function() {
+
+       $('#fl-right').click(function() 
+       { 
+            alert("flèche droite");
+            return false;;
+          
+      });
+        $('#fl-left').click(function() 
+       { 
+            alert("flèche gauche");
+            return false;;
+          
+      });
+
+
       if (clic == 0)
       {
         $('.defilement').css(
