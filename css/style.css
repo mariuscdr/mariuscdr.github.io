@@ -163,6 +163,10 @@ width: inherit;
   text-align: center;
 }
 
+.photos{
+width: 100vw
+}
+
 
 @media screen and (max-width: 768px) {
   /* Styles pour la version mobile (1 colonne) */
