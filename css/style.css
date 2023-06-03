@@ -1,0 +1,171 @@
+body{
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),url('./telechargement/background.jpg');
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.accueil{
+background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(200, 200, 200, 0.3)
+  ),url('./telechargement/imageprincipale.jpg');
+background-attachment: fixed;
+background-position: left;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.titre-principal{
+  color: blackw;
+}
+
+
+.titre-competences{
+        font-weight: bold;
+        text-align: center;
+        font-size: 2em;
+}
+
+.icon-competences{
+        margin-left: calc(40% - 11px);
+        padding-bottom: 40px;
+        width: 30%;
+        height: 30%;
+        position: static;
+}
+
+#colonne-photos{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+}
+
+.cadre-photos:hover{
+  transform: scale(1.02);
+  z-index: 0;
+  transition: all 0.10s ease-out;
+}
+
+.navbar-start{
+  margin-left: 10vw;
+}
+.navbar-end{
+  margin-right: 7vw;
+}
+
+.photographie{
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(200, 200, 200, 0.3)
+    ),url('./telechargement/transition.png');
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.programmation{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.3)
+    ),url('./telechargement/program.jpg');
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#titre-programmation{
+  color: white;
+}
+
+.titre-projet{
+position: absolute;
+transform-origin: center;
+top: 35%;
+left: 15%;
+color: orange;
+font-size: 3rem;
+width: inherit;
+
+
+}
+
+.cadre-photos{
+  position: relative;
+}
+
+
+.project {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.project img {
+  display: block;
+  margin: 0 auto;
+}
+
+.project .title {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 1.9rem;
+
+  color: #ffffff;
+}
+
+.project-description{
+  position: absolute;
+  width: 90%;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0;
+  transition: all 0.10s ease-out;
+}
+
+.project:hover .project-description{
+  opacity: 1;
+  color: #ffffff;
+}
+.project:hover .cadre-photos{
+  filter: brightness(0.7);
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.contact img {
+  width: 7vw;
+  margin-right: 10px;
+}
+
+.contact .name {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Styles pour la version mobile (1 colonne) */
+  .columns.is-mobile {
+    flex-direction: column;
+  }
